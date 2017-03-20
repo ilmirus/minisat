@@ -25,6 +25,10 @@ OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWA
 #include <fpu_control.h>
 #endif
 
+#ifdef _MSC_VER
+#define PRIu64 "I64d"
+#endif
+
 #include "minisat/mtl/IntTypes.h"
 
 //-------------------------------------------------------------------------------------------------

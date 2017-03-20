@@ -57,6 +57,9 @@ class RegionAllocator
     uint32_t wasted    () const      { return wasted_; }
 
     Ref      alloc     (int size); 
+    #ifdef free 
+    #undef free
+    #endif
     void     free      (int size)    { wasted_ += size; }
 
     // Deref, Load Effective Address (LEA), Inverse of LEA (AEL):
